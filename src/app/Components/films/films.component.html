@@ -1,0 +1,30 @@
+  <section class="section property-slider-wrap pt-100 pb-75">
+      <div class="container">
+          <div class="row justify-content-center">
+            <div class="main-heading text-center my-4">
+                <h4>Films</h4>
+            </div>
+              <div class="col-xl-4 col-lg-6 col-md-6"  *ngFor="let item of filmData">
+                  <div class="property-card style3 h_card mb-3">
+                  <mat-card class="example-card" >
+                      <mat-card-header>
+                        <mat-card-title><strong>{{item.title}}</strong></mat-card-title>
+                       <div class="ribbon">{{item.episode_id}}</div>
+                      </mat-card-header> 
+                      
+                         
+                     <img (click)="onpropertyClick(item.url)" mat-card-image title="Click to view more images" src="assets/img/img-list-1.jpg"/>
+                      <mat-card-content>
+                          <ul class="list-project-detail">
+                              <!-- <li>LVR:<span > {{ item.LVR }} </span></li>
+                              <li>Returns: <span>{{ item.returns }}</span></li> -->
+                              <li>{{item.opening_crawl}}</li>
+                              <!-- <li>Facility: <span>{{ item.facility }}</span></li> -->
+                          </ul>
+                      </mat-card-content>
+                    </mat-card>
+              </div>
+          </div>
+      </div>
+        </div>
+  </section>
